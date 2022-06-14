@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int count = 0;
+        int majele = 0;
+        
+        for(int ele : nums)
+        {
+            if(count == 0 )
+                majele = ele;
+            if(ele  == majele)
+                count++;
+            else
+                count--;
+        }
+        return majele;
+    }
+};
